@@ -59,15 +59,23 @@ export default function Index() {
               </div>
               <div className="hidden md:flex space-x-8">
                 <a href="#features" className="hover:text-blue-400 transition-colors">Features</a>
-                <a href="#fleet" className="hover:text-blue-400 transition-colors">Fleet</a>
+                <a href="#hero" className="hover:text-blue-400 transition-colors">Fleet</a>
                 <a href="#analytics" className="hover:text-blue-400 transition-colors">Analytics</a>
-                <a href="#contact" className="hover:text-blue-400 transition-colors">Contact</a>
+                <a href="#cta" className="hover:text-blue-400 transition-colors">Contact</a>
               </div>
               <div className="flex space-x-4">
-                <button className="px-4 py-2 rounded-lg border border-blue-400 hover:bg-blue-400/10 transition-all">
+                <button 
+                  className="px-4 py-2 rounded-lg border border-blue-400 hover:bg-blue-400/10 transition-all"
+                  onClick={() => window.location.href = '/login'}
+                  aria-label="Sign in to your account"
+                >
                   Sign In
                 </button>
-                <button className="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 transition-all shadow-lg shadow-blue-500/50">
+                <button 
+                  className="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 transition-all shadow-lg shadow-blue-500/50"
+                  onClick={() => window.location.href = '/signup'}
+                  aria-label="Start your free trial"
+                >
                   Start Free Trial
                 </button>
               </div>
@@ -76,7 +84,7 @@ export default function Index() {
         </nav>
 
         {/* Hero Section */}
-        <section className="relative overflow-hidden">
+        <section id="hero" className="relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-8">
@@ -92,10 +100,18 @@ export default function Index() {
                   all in one platform.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <button className="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 transition-all shadow-2xl shadow-blue-500/50 text-lg font-semibold transform hover:scale-105">
+                  <button 
+                    className="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 transition-all shadow-2xl shadow-blue-500/50 text-lg font-semibold transform hover:scale-105"
+                    onClick={() => window.location.href = '/signup'}
+                    aria-label="Get started with free trial"
+                  >
                     Get Started Free
                   </button>
-                  <button className="px-8 py-4 rounded-xl border-2 border-white/20 hover:bg-white/10 transition-all text-lg font-semibold">
+                  <button 
+                    className="px-8 py-4 rounded-xl border-2 border-white/20 hover:bg-white/10 transition-all text-lg font-semibold"
+                    onClick={() => window.location.href = '/demo'}
+                    aria-label="Watch product demo"
+                  >
                     Watch Demo
                   </button>
                 </div>
@@ -235,7 +251,7 @@ export default function Index() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 lg:py-32">
+        <section id="cta" className="py-20 lg:py-32">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl lg:text-6xl font-bold mb-6">
               Ready to Transform Your Fleet?
@@ -244,10 +260,18 @@ export default function Index() {
               Join thousands of companies already optimizing their fleet operations
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="px-10 py-5 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 transition-all shadow-2xl shadow-blue-500/50 text-xl font-semibold transform hover:scale-105">
+              <button 
+                className="px-10 py-5 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 transition-all shadow-2xl shadow-blue-500/50 text-xl font-semibold transform hover:scale-105"
+                onClick={() => window.location.href = '/signup'}
+                aria-label="Start your free trial"
+              >
                 Start Your Free Trial
               </button>
-              <button className="px-10 py-5 rounded-xl border-2 border-white/20 hover:bg-white/10 transition-all text-xl font-semibold">
+              <button 
+                className="px-10 py-5 rounded-xl border-2 border-white/20 hover:bg-white/10 transition-all text-xl font-semibold"
+                onClick={() => window.location.href = '/demo'}
+                aria-label="Schedule a demo with our team"
+              >
                 Schedule a Demo
               </button>
             </div>
@@ -270,25 +294,25 @@ export default function Index() {
               <div>
                 <h4 className="font-semibold mb-4">Product</h4>
                 <ul className="space-y-2 text-gray-400 text-sm">
-                  <li><a href="#" className="hover:text-blue-400 transition-colors">Features</a></li>
-                  <li><a href="#" className="hover:text-blue-400 transition-colors">Pricing</a></li>
-                  <li><a href="#" className="hover:text-blue-400 transition-colors">API</a></li>
+                  <li><a href="#features" className="hover:text-blue-400 transition-colors">Features</a></li>
+                  <li><a href="/pricing" className="hover:text-blue-400 transition-colors">Pricing</a></li>
+                  <li><a href="/api" className="hover:text-blue-400 transition-colors">API</a></li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold mb-4">Company</h4>
                 <ul className="space-y-2 text-gray-400 text-sm">
-                  <li><a href="#" className="hover:text-blue-400 transition-colors">About</a></li>
-                  <li><a href="#" className="hover:text-blue-400 transition-colors">Careers</a></li>
-                  <li><a href="#" className="hover:text-blue-400 transition-colors">Contact</a></li>
+                  <li><a href="/about" className="hover:text-blue-400 transition-colors">About</a></li>
+                  <li><a href="/careers" className="hover:text-blue-400 transition-colors">Careers</a></li>
+                  <li><a href="#cta" className="hover:text-blue-400 transition-colors">Contact</a></li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold mb-4">Legal</h4>
                 <ul className="space-y-2 text-gray-400 text-sm">
-                  <li><a href="#" className="hover:text-blue-400 transition-colors">Privacy</a></li>
-                  <li><a href="#" className="hover:text-blue-400 transition-colors">Terms</a></li>
-                  <li><a href="#" className="hover:text-blue-400 transition-colors">Security</a></li>
+                  <li><a href="/privacy" className="hover:text-blue-400 transition-colors">Privacy</a></li>
+                  <li><a href="/terms" className="hover:text-blue-400 transition-colors">Terms</a></li>
+                  <li><a href="/security" className="hover:text-blue-400 transition-colors">Security</a></li>
                 </ul>
               </div>
             </div>
