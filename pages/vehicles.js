@@ -160,7 +160,8 @@ export default function VehiclesPage() {
                   key={vehicle.id}
                   vehicle={vehicle}
                   onClick={() => {
-                    // TODO: Navigate to vehicle detail page
+                    // Future enhancement: Implement vehicle detail page
+                    // See GitHub issue for vehicle detail view implementation
                     console.log('Vehicle clicked:', vehicle.id);
                   }}
                 />

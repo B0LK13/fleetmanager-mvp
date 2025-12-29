@@ -151,7 +151,8 @@ export default function DriversPage() {
                   key={driver.id}
                   driver={driver}
                   onClick={() => {
-                    // TODO: Navigate to driver detail page
+                    // Future enhancement: Implement driver detail page
+                    // See GitHub issue for driver detail view implementation
                     console.log('Driver clicked:', driver.id);
                   }}
                 />
